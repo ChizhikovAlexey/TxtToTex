@@ -25,11 +25,11 @@ public class Main {
         }
 
         outputFW.append("\\documentclass{article}\n" +
-                        "\\usepackage[utf8]{inputenc}\n" +
-                        "\\usepackage[russian]{babel}\n" +
-                        "\n" +
-                        "\\begin{document}\n" +
-                        "\\begin{tabular}{ | l | l | l |} \\hline\n");
+                "\\usepackage[utf8]{inputenc}\n" +
+                "\\usepackage[russian]{babel}\n" +
+                "\n" +
+                "\\begin{document}\n" +
+                "\\begin{tabular}{ | l | l | l |} \\hline\n");
 
         Pattern namePattern = Pattern.compile("[\\sа-яА-Я^]+(?=,)");
         Pattern yearPattern = Pattern.compile("\\d{4}\\s*г\\.р\\.\\s*");
