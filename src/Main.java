@@ -31,8 +31,8 @@ public class Main {
                 "\\begin{document}\n" +
                 "\\begin{tabular}{ | l | l | l |} \\hline\n");
 
-        Pattern namePattern = Pattern.compile("[\\sа-яА-Я^]+(?=,)");
-        Pattern yearPattern = Pattern.compile("\\d{4}\\s*г\\.р\\.\\s*");
+        Pattern namePattern = Pattern.compile("[\\s\\w^]+(?=,)", Pattern.UNICODE_CHARACTER_CLASS);
+        Pattern yearPattern = Pattern.compile("\\d{2}\\.\\d{2}\\.\\d{4}");
         Matcher nameMatcher = namePattern.matcher("");
         Matcher yearMatcher = yearPattern.matcher("");
         StringBuilder partOfInput = new StringBuilder();
@@ -67,6 +67,5 @@ public class Main {
         outputFW.append("\\end{tabular}\n" +
                 "\\end{document}");
         outputFW.flush();
-
     }
 }
